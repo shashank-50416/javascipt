@@ -1,0 +1,164 @@
+/* General page styles */
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background-image: url(https://img.freepik.com/free-photo/white-clouds-blue-sky-daytime_417767-59.jpg?ga=GA1.1.346216394.1730112114&semt=ais_hybrid);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+}
+
+.header nav a:hover {
+    color: #f4a261;
+}
+
+/* Main container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 30px;
+}
+
+/* Card Styles */
+main{
+  background-image: url(https://img.freepik.com/free-photo/cloudy-sky-hills-with-dry-grass-rural-area_181624-5885.jpg?ga=GA1.1.346216394.1730112114&semt=ais_hybrid);
+  background-repeat: no-repeat;
+  background-size: cover;
+    background-attachment: fixed;
+}
+.card {
+    background-color: #fff;
+    width: 250px;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #2e3b4e;
+    margin: 15px 0;
+}
+
+.card p {
+    font-size: 1.1rem;
+    color: #f4a261;
+    margin-bottom: 15px;
+}
+
+.card a {
+    background-color: #2e3b4e;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.card a:hover {
+    background-color: #f4a261;
+}
+
+/* Hover effect on card */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.cart-container {
+    padding: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.cart-item img {
+    margin-right: 10px;
+}
+
+.cart-item span {
+    margin-right: 15px;
+}
+
+button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e60000;
+}
+
+.cart-summary {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#checkout-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#checkout-btn:hover {
+    background-color: #218838;
+}

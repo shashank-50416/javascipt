@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="home-container">
+        <h2>Welcome to Your Bank</h2>
+        <div class="card-container">
+            <!-- Account Details Card -->
+            <div class="card">
+                <h3>Account Details</h3>
+                <p>View your account information and balance.</p>
+                <button onclick="redirectToPage('account-details.html')">View Details</button>
+            </div>
+            
+            <!-- Credit Card -->
+            <div class="card">
+                <h3>Credit Amount</h3>
+                <p>Add funds to your account.</p>
+                <button onclick="redirectToPage('credit.html')">Credit Amount</button>
+            </div>
+            
+            <!-- Debit Card -->
+            <div class="card">
+                <h3>Debit Amount</h3>
+                <p>Withdraw funds from your account.</p>
+                <button onclick="redirectToPage('debit.html')">Debit Amount</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Check if user is logged in
+        if (!localStorage.getItem('loggedIn')) {
+            alert("You need to log in first.");
+            window.location.href = "login.html";  // Redirect to login if not logged in
+        }
+
+        // Function to redirect to pages after password check
+        function redirectToPage(page) {
+            const password = prompt("Enter your password to access this page:");
+
+            if (password === "password123") {
+                window.location.href = page;  // Redirect to the page if password is correct
+            } else {
+                alert("Incorrect password. Access denied.");
+            }
+        }
+    </script>
+</body>
+</html>

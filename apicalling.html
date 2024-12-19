@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #main{
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        .items{
+            margin: 2%;
+            background-color: antiquewhite;
+            padding: 2%;
+            height: 200px;
+            width: 250px;
+        }
+        .items img{
+            width: 200px;
+        }
+        button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+   
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+    </style>
+</head>
+<body>
+    <button onclick="window.location.href='./index.html'">Go to Home</button>
+    <div id="main"></div>
+    
+    <script>
+        async function getData() {
+            const url=await fetch('https://dummyjson.com/quotes')
+            let data = await url.json();
+            let myData = data.quotes;
+            console.log(myData);
+
+
+            let myQuotes = myData.map((e)=> {
+                return(
+                    `
+                    <div class="items">
+                    <p>Id:${e.id}</p>    
+                    <p>Quotes:${e.quote}</p> 
+                    <p>Author:${e.author}</p>
+                      
+                    </div>
+                    `
+                )
+            }).join("");
+            document.getElementById('main').innerHTML=myQuotes
+        }getData();
+    </script>
+</body>
+</html>

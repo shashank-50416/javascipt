@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker Store - Home</title>
+    <link rel="stylesheet" href="product.css">
+    <script src="product.js" defer></script> <!-- Load script after the DOM is ready -->
+</head>
+<body>
+
+   
+    <header class="header">
+        <h1>Sneaker Store</h1>
+        <nav>
+            <a href="cart.html">View Cart</a>
+        </nav>
+    </header>
+    <section id="filter-section">
+        <input type="number" id="min-price" placeholder="Min price" oninput="filterProducts()" min="0">
+        <input type="number" id="max-price" placeholder="Max price" oninput="filterProducts()" min="0">
+        <button onclick="applyFilters()">Apply Filters</button>
+    </section>
+    <main class="container" id="product-list">
+        <div class="card" data-id="1">
+            <img src="https://static.nbastore.in/resized/500X500/561/nike-air-max-impact-4-basketball-shoes-blackwhite-black-6690bcc500383.jpg" height="150px" width="150px" alt="Nike Air Max">
+            <h3>Nike Air Max</h3>
+            <p class="price">$120</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="card" data-id="2">
+            <img src="https://static.nbastore.in/resized/500X500/777/jordan-stay-loyal-3-sneakers-whiteblackgym-red-white-67442cda8be21.jpg" height="150px" width="150px" alt="Adidas UltraBoost">
+            <h3>Adidas UltraBoost</h3>
+            <p class="price">$140</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="card" data-id="3">
+            <img src="https://static.nbastore.in/resized/700X700/778/jordan-max-aura-6-sneakers-whiteblack-white-67442700bac96.jpg" height="150px" width="150px" alt="Jordan Max Aura 6">
+            <h3>JORDAN MAX AURA 6</h3>
+            <p class="price">$180</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="card" data-id="4">
+            <img src="https://static.nbastore.in/resized/700X700/746/converse-all-star-bb-shift-cx-whiteblack-white-672b107676304.jpg" height="150px" width="150px" alt="Converse All Star">
+            <h3>CONVERSE ALL STAR BB SHIFT CX</h3>
+            <p class="price">$100</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="card" data-id="5">
+            <img src="https://static.nbastore.in/resized/500X500/730/nike-gt-cut-3-ep-basketball-shoes-royal-pulsewhite-blue-672235aeca222.jpg" height="150px" width="150px" alt="Nike GT Cut">
+            <h3>NIKE G.T. CUT 3 EP</h3>
+            <p class="price">$200</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="card" data-id="6">
+            <img src="https://static.nbastore.in/resized/500X500/728/nike-impact-4-basketball-shoes-light-lemon-twistdark-raisinwhite-light-lemon-6722354fa81a4.png" height="150px" width="150px" alt="Nike Impact 4">
+            <h3>NIKE IMPACT 4</h3>
+            <p class="price">$140</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <!-- Add more products as needed -->
+  
+</body>
+</html>

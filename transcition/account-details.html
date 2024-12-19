@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="account-details-container">
+        <h2>Your Account Details</h2>
+        <p class="lead">Name : <span>Jeff Bozzs</span></p>
+        <p class="lead">Primary Account no. : <span>110124567898</span></p>
+        <p class="lead">IFSC code : <span>CNRB11024567</span></p>
+        <p class="lead">Mobile-no : <span>+91-9990088855</span></p>
+        <div>
+            <p><strong>Account Balance:</strong> <span id="accountBalance">0</span></p>
+        </div>
+        <div class="nav-links">
+            <button onclick="redirectToHome()">Home</button>
+            <button onclick="redirectToPage('credit.html')">Credit Amount</button>
+            <button onclick="redirectToPage('debit.html')">Debit Amount</button>
+        </div>
+    </div>
+
+    <script>
+        // Check if user is logged in
+        if (!localStorage.getItem('loggedIn')) {
+            alert("You need to log in first.");
+            window.location.href = "login.html";  // Redirect to login if not logged in
+        }
+
+        // Load balance from localStorage
+        let balance = localStorage.getItem("balance");
+        if (!balance) {
+            balance = 0;
+            localStorage.setItem("balance", balance);
+        }
+
+        document.getElementById('accountBalance').textContent = `₹${balance}`;
+
+        // Function to redirect to the home page
+        function redirectToHome() {
+            const password = prompt("Enter your password to access Home:");
+
+            if (password === "password123") {
+                window.location.href = "home.html";
+            } else {
+                alert("Incorrect password. Access denied.");
+            }
+        }
+
+        // Function to redirect to Credit or Debit pages with password check
+        function redirectToPage(page) {
+            const password = prompt("Enter your password to access this page:");
+
+            if (password === "password123") {
+                window.location.href = page;
+            } else {
+                alert("Incorrect password. Access denied.");
+            }
+        }
+    </script>
+</body>
+</html>
